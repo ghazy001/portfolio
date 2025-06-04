@@ -50,10 +50,17 @@
                     <ul class="s-header__menu-links">
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                         <!-- CV Download Button -->
+                        <a onclick="downloadCV()" class="cv-download-btn">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            Download CV
+                        </a>   
                     </ul>
                     <div class="s-header__contact">
                         <a href="contact.html" class="btn btn--primary s-header__contact-btn">Get in Touch</a>
+                        
                     </div>
+                    
                 </nav>
             </div>
         </header>
@@ -316,5 +323,16 @@
         <!-- JavaScript -->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script>
+     function downloadCV() {
+        const link = document.createElement('a');
+        link.href = 'Ghazi_SaoudiCV.pdf'; // Update path if necessary
+        link.download = 'My_CV.pdf'; // Name the downloaded file
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    </script>
+
     </body>
 </html>
